@@ -1,0 +1,19 @@
+#something {
+  z-index: 18
+}
+
+.tom {
+  z-index: 2;
+}
+
+.another, .z-index {
+  z-index: 2;
+}
+
+.another, .z-index {
+  z-index: -2;
+}
+
+#something {
+  z-index: 34
+}

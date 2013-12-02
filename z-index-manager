@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+
+var content = fs.readFileSync(process.argv[2]).toString();
+
+var zRegex = /(z-index\s*:\s*)(-?[0-9]+)/gi;
+var zIndices = content.match(zRegex);
+var values = zIndices.map(function (match, i) {
+  return {
+    index: i,
+    val: parseInt(match.match(/-?[0-9]+/gi, '')[0], 10)
+  };
+}).sort(function (a, b) {
+  return a.val - b.val;
+});
+
+var val = 10;
+var inc = 10;
+var last;
+
+var result = values.map(function (obj) {
+  var newObj = {
+    index: obj.index
+  };
+  if (obj.val > 0) {
+    if (typeof last === "number" && obj.val !== last) {
+      val += inc;
+    }
+    newObj.val = val;
+    last = obj.val;
+  } else {
+    newObj.val = obj.val;
+  }
+  return newObj;
+}).sort(function (a, b) {
+  return a.index - b.index;
+});
+
+var counter = 0;
+var out = content.replace(zRegex, function (match, prop, number) {
+  return prop + result[counter++].val;
+});
+
+fs.writeFileSync(process.argv[3] || process.argv[2], out);
