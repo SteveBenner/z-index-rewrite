@@ -1,6 +1,6 @@
 {
   "name": "z-index-rewrite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rewrite z-index values to be more manageable.",
   "bin": {
     "z-index-rewrite": "z-index-rewrite"
