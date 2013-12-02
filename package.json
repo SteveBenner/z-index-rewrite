@@ -1,12 +1,10 @@
 {
   "name": "z-index-manager",
   "version": "0.0.0",
-  "description": "",
+  "description": "Rewrite z-index values to be more manageable.",
   "bin": {
     "z-index-manager": "z-index-manager"
   },
-  "scripts": {
-  },
-  "author": "",
-  "license": "BSD-2-Clause"
+  "author": "Tom Ashworth <ta@twitter.com>",
+  "license": "MIT"
 }
