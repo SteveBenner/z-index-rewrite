@@ -1,9 +1,9 @@
 {
-  "name": "z-index-manager",
+  "name": "z-index-rewrite",
   "version": "0.0.0",
   "description": "Rewrite z-index values to be more manageable.",
   "bin": {
-    "z-index-manager": "z-index-manager"
+    "z-index-rewrite": "z-index-rewrite"
   },
   "author": "Tom Ashworth <ta@twitter.com>",
   "license": "MIT"

@@ -1,4 +1,4 @@
-# z-index-manager
+# z-index-rewrite
 
 Rewrite z-index values to be more manageable.
 
@@ -53,21 +53,21 @@ becomes:
 ## Install
 
 ```shell
-$ npm install -g z-index-manager
+$ npm install -g z-index-rewrite
 ```
 
 ## Usage
 
-Run `z-index-manager` with the file you want to rewrite. You can also pass a different output file if you want.
+Run `z-index-rewrite` with the file you want to rewrite. You can also pass a different output file if you want.
 
 ```shell
-$ z-index-manager [path/to/source] [optional path/to/output]
+$ z-index-rewrite [path/to/source] [optional path/to/output]
 ```
 
 For example:
 
 ```shell
-$ z-index-manager css/style.css
+$ z-index-rewrite css/style.css
 ```
 
 **Note:** It currently ignores negative values.
