@@ -1,6 +1,4 @@
-#something {
-  z-index: 18
-}
+#something { z-index:        18 }
 
 .tom {
   z-index: 2;
@@ -8,6 +6,7 @@
 
 .another, .z-index {
   z-index: 2;
+  background: hotpink;
 }
 
 .another, .z-index {
@@ -15,5 +14,13 @@
 }
 
 #something {
-  z-index: 34
+        z-index:          34
+
+
+
+}
+
+#something_else {
+  z-index: 0;
+  background: pink;
 }
